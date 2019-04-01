@@ -24,4 +24,6 @@ declare module "redux-first-history" {
   export const push: (to: string) => Action;
 
   export function reachify(history: History): ReachHistory;
+
+  export const LOCATION_CHANGE: string;
 }
