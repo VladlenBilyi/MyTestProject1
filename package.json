@@ -1,5 +1,6 @@
 {
-  "name": "just-another-react-app",
+  "name": "react-redux-typescript-app",
+  "description": "Sample application built with TypeScript, React, Redux, React Bootstrap, SCSS",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
