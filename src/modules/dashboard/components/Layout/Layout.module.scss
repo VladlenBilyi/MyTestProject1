@@ -1,0 +1,23 @@
+@import "../../../../themes/constants.scss";
+
+.sidebar {
+  border: 1px solid black;
+  background-color: #333;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  height: $header-height;
+  background: white;
+  box-shadow: 0 -3px 6px grey;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  margin: 25px;
+  box-shadow: 1px 1px 2px grey;
+}

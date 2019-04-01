@@ -1,0 +1,10 @@
+// Override default variables before the import
+$body-bg: #eee;
+$error-color: crimson;
+
+:root {
+  --theme-main: var(--dark);
+}
+
+// Import Bootstrap and its default variables
+@import "~bootstrap/scss/bootstrap.scss";

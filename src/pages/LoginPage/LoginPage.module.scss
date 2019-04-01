@@ -1,0 +1,20 @@
+@import "../../themes/constants.scss";
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: $header-height;
+  margin-bottom: 50px;
+  background: white;
+  box-shadow: 0 -3px 6px grey;
+}
+
+.logo {
+  height: $header-height;
+}
+
+.form {
+  background: white;
+  border-radius: 8px;
+}
