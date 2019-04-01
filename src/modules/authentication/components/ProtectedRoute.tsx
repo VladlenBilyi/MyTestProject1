@@ -19,13 +19,6 @@ type DispatchProps = typeof mapDispatchToProps;
 type InjectedProps = ModelProps & DispatchProps;
 
 export class ProtectedRouteUnconnected extends React.Component<{}> {
-  componentDidMount() {
-    const { setToken } = this.props as InjectedProps;
-    const storedToken = window.localStorage.getItem("app:token");
-    if (storedToken) {
-      setToken(storedToken);
-    }
-  }
   render() {
     const { token } = this.props as InjectedProps;
     return token ? <>{this.props.children}</> : <div>Unauthorized</div>;
