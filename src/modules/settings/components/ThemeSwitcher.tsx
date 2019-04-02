@@ -9,6 +9,7 @@ import { activeThemeSelector } from "../selectotrs";
 
 import lightIcon from "../../../icons/switch-to-light.svg";
 import darkIcon from "../../../icons/switch-to-dark.svg";
+import styles from "./ThemeSwitcher.module.scss";
 
 const mapStateToProps = (state: Store) => ({
   theme: activeThemeSelector(state)
@@ -25,16 +26,15 @@ type InjectedProps = ModelProps & DispatchProps;
 export const ThemeSwitcherUnconnected: React.FC<{}> = props => {
   const { theme, toggleTheme } = props as InjectedProps;
   const iconSrc = theme === "light" ? darkIcon : lightIcon;
+
+  function onClick() {
+    toggleTheme();
+  }
+
   return (
-    <div>
-      <button
-        onClick={e => {
-          toggleTheme();
-        }}
-      >
-        <img src={iconSrc} height={32} alt="сменить тему" />
-      </button>
-    </div>
+    <button title="сменить тему" className={styles.switcher} onClick={onClick}>
+      <img src={iconSrc} height={32} alt="сменить тему" />
+    </button>
   );
 };
 

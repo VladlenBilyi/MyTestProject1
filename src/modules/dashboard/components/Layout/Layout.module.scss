@@ -6,13 +6,6 @@
   height: 100vh;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  height: $header-height;
-  box-shadow: 0 -3px 6px grey;
-}
-
 .content-wrapper {
   background-color: var(--themed-background-secondary-color);
 }

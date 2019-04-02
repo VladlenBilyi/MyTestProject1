@@ -13,12 +13,12 @@ interface Props {
 export const Layout: React.FC<Props> = props => {
   const { Content, Header } = props;
   return (
-    <Row style={{ width: "100vw" }} noGutters>
+    <Row style={{ width: "100vw", overflow: "hidden" }} noGutters>
       <Col xs={2} className={styles.sidebar}>
         <Sidebar />
       </Col>
       <Col className={styles["content-wrapper"]}>
-        <div className={styles.header}>{Header}</div>
+        {Header}
         <div className={styles.content}>{Content}</div>
       </Col>
     </Row>

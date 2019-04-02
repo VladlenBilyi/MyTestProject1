@@ -1,19 +1,21 @@
+@import "../../../../themes/constants.scss";
+
 .wrapper {
-  background-color: var(--themed-background-primary-color);
+  display: flex;
   width: 100%;
-  padding: 25px;
+  height: $header-height;
+  align-items: center;
+  background-color: var(--themed-background-primary-color);
+  padding: 0 20px;
+  box-shadow: 0 -3px 6px grey;
 }
 
 .icon {
   position: relative;
   align-self: center;
-  top: -0.05em;
-  height: 1.5em;
-  width: 1.5em;
+  top: -0.125em;
+  height: 2.5em;
+  width: 2.5em;
   margin-right: 20px;
   color: white;
-}
-
-.text {
-  color: var(--themed-text-secondary-color);
 }
