@@ -1,0 +1,19 @@
+.wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: var(--themed-background-primary-color);
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+}
+
+.switcher {
+  margin-left: auto;
+}
+
+.item {
+  margin: 10px;
+}

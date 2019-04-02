@@ -7,3 +7,8 @@
   font-weight: 400;
   color: var(--themed-text-secondary-color);
 }
+
+.link-in-button, .link-in-button:hover  {
+  color: var(--themed-text-primary-color);
+  text-decoration: none
+}

@@ -10,11 +10,13 @@ interface ElementPalette {
   primary: string;
   secondary: string;
   inverted: string;
+  hover?: string;
 }
 
 export interface ElementsPalette {
   text: ElementPalette;
   background: ElementPalette;
+  button: ElementPalette;
 }
 
 export interface Theme {
@@ -37,6 +39,12 @@ export const themes: Record<ThemeName, Theme> = {
           primary: "#EEE",
           secondary: "#AAA",
           inverted: "#222"
+        },
+        button: {
+          primary: "#AAA",
+          secondary: "#EEE",
+          inverted: "#222",
+          hover: "#BBB"
         }
       },
       main: {
@@ -59,6 +67,12 @@ export const themes: Record<ThemeName, Theme> = {
           primary: "#222",
           secondary: "#333",
           inverted: "#FFF"
+        },
+        button: {
+          primary: "#333",
+          secondary: "#222",
+          inverted: "#FFF",
+          hover: "#444"
         }
       },
       main: {
@@ -87,12 +101,16 @@ export const applyTheme = (themeName: ThemeName = defaultTheme) => {
     for (const colorType in theme.palette.elements[
       el as keyof ElementsPalette
     ]) {
-      document.documentElement.style.setProperty(
-        `--themed-${el}-${colorType}-color`,
+      const value =
         theme.palette.elements[el as keyof ElementsPalette][
           colorType as keyof ElementPalette
-        ]
-      );
+        ];
+      if (value) {
+        document.documentElement.style.setProperty(
+          `--themed-${el}-${colorType}-color`,
+          value
+        );
+      }
     }
   }
 };

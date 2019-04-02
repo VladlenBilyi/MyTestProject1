@@ -1,0 +1,24 @@
+.link a,
+.link a:hover {
+  color: red;
+  text-decoration: var(--themed-text-primary-color);
+}
+
+.link {
+  border: 1px solid red;
+}
+
+.item {
+  background-color: transparent;
+  padding: 10px;
+  text-align: center;
+}
+
+.bordered {
+  border-radius: 6px;
+  background-color: var(--themed-button-primary-color);
+}
+
+.bordered:hover {
+  background-color: var(--themed-button-hover-color);
+}
