@@ -5,7 +5,7 @@ import { Store } from "../../../store";
 
 import { toggleTheme } from "../actionsThunk";
 
-import { activeThemeSelector } from "../selectotrs";
+import { activeThemeSelector } from "../selectors";
 
 import lightIcon from "../../../icons/switch-to-light.svg";
 import darkIcon from "../../../icons/switch-to-dark.svg";
