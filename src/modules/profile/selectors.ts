@@ -1,5 +1,5 @@
 import { Store } from "../../store";
-import { isFetched as isFetchedUtil } from "../../utils/model";
+import { isFetched as isFetchedUtil } from "../../utils/fetchState";
 
 export const getProfile = (state: Store) => state.profile;
 export const getFirstName = (state: Store) => state.profile.firstName;

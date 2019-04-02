@@ -1,4 +1,4 @@
-import { Fetchable, createFetchableInitialState } from "../../utils/model";
+import { Fetchable, createFetchableInitialState } from "../../utils/fetchState";
 
 export interface ProfileModel {
   id: string;

@@ -2,6 +2,6 @@ import { getProfile } from "./actionsApi";
 
 export const onRouteEnter = {
   resource: "profile",
-  url: "/dashboard/profile",
+  url: /\/dashboard\//,
   action: () => getProfile()
 };

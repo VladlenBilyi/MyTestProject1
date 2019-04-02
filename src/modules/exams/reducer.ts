@@ -1,4 +1,4 @@
-import { started, success, failed } from "../../utils/model";
+import { started, success, failed } from "../../utils/fetchState";
 
 import { ExamsState, initialState } from "./model";
 import { ActionTypes, TypeKeys } from "./actions";

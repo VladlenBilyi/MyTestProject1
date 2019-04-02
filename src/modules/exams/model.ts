@@ -1,8 +1,5 @@
-import {
-  Fetchable,
-  createFetchableInitialState,
-  WithError
-} from "../../utils/model";
+import { Fetchable, createFetchableInitialState } from "../../utils/fetchState";
+import { WithError } from "../../utils/errorState";
 import { Omit } from "../../utils/types";
 
 import { ExamServerData, ExamsServerData } from "./api";
