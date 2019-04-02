@@ -21,7 +21,6 @@ export const createFetchOnRouteEnterMiddleware = <S>(options: Options<S>) => {
   ) => action => {
     if (action.type === LOCATION_CHANGE) {
       if (action.payload.location.pathname === options.url) {
-        console.log("got target, dispatching");
         // A little bit hacky, but we need to set stored in the local storage token first
         setTimeout(() => dispatch(options.action() as any), options.delay);
       }
