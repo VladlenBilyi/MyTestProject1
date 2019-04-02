@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { push } from "redux-first-history";
 import { Link } from "@reach/router";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, FormControlProps } from "react-bootstrap";
 
 import { Store } from "../../../../store";
 
-import { getToken, getError } from "../../selectors";
+import { getError } from "../../selectors";
 import { login } from "../../actionsApi";
 
-import { InputField } from '../InputField/InputField';
+import { InputField } from "../InputField/InputField";
 
 import styles from "./LoginForm.module.scss";
 
 const mapStateToProps = (state: Store) => ({
-  token: getToken(state),
   error: getError(state)
 });
 
@@ -25,7 +24,6 @@ const mapDispatchToProps = {
 
 type ModelProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;
-
 type InjectedProps = ModelProps & DispatchProps;
 
 export const LoginFormUnconnected: React.FC<{}> = props => {
@@ -38,6 +36,14 @@ export const LoginFormUnconnected: React.FC<{}> = props => {
   function login(e: React.SyntheticEvent) {
     e.preventDefault();
     injected.login(phoneField, passwordField);
+  }
+
+  function onPhoneChange(e: React.FormEvent<FormControlProps>) {
+    setPhoneField(e.currentTarget.value || "");
+  }
+
+  function onPasswordChange(e: React.FormEvent<FormControlProps>) {
+    setPasswordField(e.currentTarget.value || "");
   }
 
   return (
@@ -55,7 +61,7 @@ export const LoginFormUnconnected: React.FC<{}> = props => {
           prepend="+7"
           currentActiveField={activeField}
           setCurrentActiveField={setActiveField}
-          onChange={(e: any) => setPhoneField(e.target.value)}
+          onChange={onPhoneChange}
           error={{
             failures: injected.error.failures
               ? injected.error.failures.Phone
@@ -71,7 +77,7 @@ export const LoginFormUnconnected: React.FC<{}> = props => {
           placeholder=""
           currentActiveField={activeField}
           setCurrentActiveField={setActiveField}
-          onChange={(e: any) => setPasswordField(e.target.value)}
+          onChange={onPasswordChange}
           error={{
             failures: injected.error.failures
               ? injected.error.failures.Password
