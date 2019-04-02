@@ -8,8 +8,10 @@ import { setToken } from "./modules/authentication/actions";
 
 import { App } from "./App";
 
-import "./themes/themes.scss";
-import "./themes/custom.scss";
+import { applyTheme } from "./themes/themes";
+
+import "./themes/styles.scss";
+import "./themes/bootstrap.scss";
 
 const { store, history } = createStore();
 
@@ -17,6 +19,8 @@ const storedToken = window.localStorage.getItem("app:token");
 if (storedToken) {
   store.dispatch(setToken(storedToken));
 }
+
+applyTheme();
 
 ReactDOM.render(
   <App store={store} history={history} />,

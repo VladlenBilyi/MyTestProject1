@@ -8,16 +8,19 @@
 
 .header {
   display: flex;
-  height: $header-height;
-  background: white;
-  box-shadow: 0 -3px 6px grey;
   align-items: center;
+  height: $header-height;
+  box-shadow: 0 -3px 6px grey;
+}
+
+.content-wrapper {
+  background-color: var(--themed-background-secondary-color);
 }
 
 .content {
   display: flex;
-  background-color: white;
   justify-content: center;
   margin: 25px;
+  background-color: var(--themed-background-primary-color);
   box-shadow: 1px 1px 2px grey;
 }

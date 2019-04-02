@@ -1,0 +1,19 @@
+.wrapper {
+  background-color: var(--themed-background-primary-color);
+  width: 100%;
+  padding: 25px;
+}
+
+.icon {
+  position: relative;
+  align-self: center;
+  top: -0.05em;
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 20px;
+  color: white;
+}
+
+.text {
+  color: var(--themed-text-secondary-color);
+}

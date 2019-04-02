@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import Table from "react-bootstrap/Table";
 
 import { Store } from "../../../../store";
 
@@ -24,34 +25,32 @@ type InjectedProps = ModelProps & DispatchProps;
 interface Props {}
 
 export const ExamsPanelUnconnected: React.FC<Props> = props => {
-  const { getExams, allExams } = props as InjectedProps;
+  const { allExams } = props as InjectedProps;
   return (
-    <div style={{ width: "100%", padding: "15px" }}>
-      <button
-        onClick={async e => {
-          const data = await getExams({
-            from: "2019-03-25",
-            to: "2029-03-25",
-            page: 0,
-            pageSize: 10,
-            sortOrder: "asc",
-            sortField: "id"
-          });
-          console.log(data);
-        }}
-      >
-        Get exams
-      </button>
-      <h3>Расписание экзаменов</h3>
-      <p>
-        Список всех экзаменов, открытых для записи, а также тех, на которые вы
-        записаны
-      </p>
-      {allExams.map(exam => (
-        <div key={exam.id}>
-          <ExamItem {...exam} />
-        </div>
-      ))}
+    <div style={{ width: "100%" }}>
+      <div style={{ padding: "25px" }}>
+        <h3 className="main-text">Расписание экзаменов</h3>
+        <p className="secondary-text">
+          Список всех экзаменов, открытых для записи, а также тех, на которые вы
+          записаны
+        </p>
+      </div>
+      <Table>
+        <thead>
+          <tr>
+            <th className="main-text">Дата и время</th>
+            <th className="main-text">Квалификация</th>
+            <th className="main-text">Уровень</th>
+            <th className="main-text">Город</th>
+            <th className="main-text">Статус</th>
+          </tr>
+        </thead>
+        <tbody>
+          {allExams.map(exam => (
+            <ExamItem {...exam} key={exam.id} />
+          ))}
+        </tbody>
+      </Table>
     </div>
   );
 };

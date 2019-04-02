@@ -1,4 +1,4 @@
-import { ThemeName } from '../../themes/themes';
+import { ThemeName, defaultTheme } from '../../themes/themes';
 
 export interface SettingsModel {
   theme: ThemeName;
@@ -7,5 +7,5 @@ export interface SettingsModel {
 export type SettingsState = SettingsModel;
 
 export const initialState: SettingsState = {
-  theme: "light"
+  theme: defaultTheme
 };

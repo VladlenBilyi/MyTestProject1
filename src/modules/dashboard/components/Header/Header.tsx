@@ -1,25 +1,14 @@
 import React from "react";
 
 import icon from "../../../../icons/dashboard-header.svg";
+import styles from "./Header.module.scss";
 
-interface Props {}
-
-export const Header: React.FC<Props> = props => {
+export const Header: React.FC<{}> = ({ children }) => {
   return (
-    <div style={{ padding: "25px" }}>
-      <h2>
-        <img
-          src={icon}
-          style={{
-            display: "inline-flex",
-            alignSelf: "center",
-            height: "1.5em",
-            width: "1.5em",
-            top: "-.1em",
-            position: "relative"
-          }}
-        />
-        <span style={{ marginLeft: "10px" }}>{props.children}</span>
+    <div className={styles.wrapper}>
+      <h2 className={styles.text}>
+        <img src={icon} className={styles.icon} />
+        <span>{children}</span>
       </h2>
     </div>
   );

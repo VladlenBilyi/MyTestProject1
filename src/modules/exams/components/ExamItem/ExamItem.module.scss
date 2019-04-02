@@ -1,5 +1,11 @@
 .wrapper {
-  display: flex;
-  border: 1px solid black;
-  background-color: var(--themed-primary-color);
+  background-color: var(--themed-background-primary-color);
+}
+
+.applying {
+  color: var(--themed-main-success-color);
+}
+
+.unknown {
+  color: var(--themed-main-warning-color);
 }

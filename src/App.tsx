@@ -11,8 +11,6 @@ import { ProfilePage } from "./pages/ProfilePage/ProfilePage";
 
 import { ProtectedRoute } from "./modules/authentication/components/ProtectedRoute";
 
-import "./App.scss";
-
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
 ) => props.pageComponent;

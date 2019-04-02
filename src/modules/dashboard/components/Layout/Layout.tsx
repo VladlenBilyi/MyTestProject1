@@ -17,7 +17,7 @@ export const Layout: React.FC<Props> = props => {
       <Col xs={2} className={styles.sidebar}>
         <Sidebar />
       </Col>
-      <Col>
+      <Col className={styles["content-wrapper"]}>
         <div className={styles.header}>{Header}</div>
         <div className={styles.content}>{Content}</div>
       </Col>
