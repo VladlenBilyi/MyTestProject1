@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import { Form, FormControlProps } from "react-bootstrap";
+import { Form, FormControlProps, InputGroup } from "react-bootstrap";
 
 import styles from "./InputField.module.scss";
 
@@ -11,6 +11,7 @@ interface Props {
   label: JSX.Element | string;
   type: string;
   onChange: OnChangeEvent;
+  prepend?: JSX.Element | string;
   placeholder?: string;
   currentActiveField?: string;
   setCurrentActiveField(fieldName?: string): void;
@@ -25,6 +26,7 @@ export const InputField: React.FC<Props> = ({
   label,
   type,
   onChange,
+  prepend,
   currentActiveField,
   placeholder,
   setCurrentActiveField,
@@ -40,19 +42,26 @@ export const InputField: React.FC<Props> = ({
       >
         {label}
       </Form.Label>
-      <Form.Control
-        type={type}
-        placeholder={placeholder}
-        onChange={onChange}
-        onFocus={() => {
-          setCurrentActiveField(name);
-        }}
-        onBlur={() => {
-          if (currentActiveField === name) {
-            setCurrentActiveField(undefined);
-          }
-        }}
-      />
+      <InputGroup>
+        {prepend && (
+          <InputGroup.Prepend>
+            <InputGroup.Text id={`prepend-${name}`}>{prepend}</InputGroup.Text>
+          </InputGroup.Prepend>
+        )}
+        <Form.Control
+          type={type}
+          placeholder={placeholder}
+          onChange={onChange}
+          onFocus={() => {
+            setCurrentActiveField(name);
+          }}
+          onBlur={() => {
+            if (currentActiveField === name) {
+              setCurrentActiveField(undefined);
+            }
+          }}
+        />
+      </InputGroup>
       {error.failures &&
         error.failures.map(failure => (
           <div key={failure} className={styles.error}>

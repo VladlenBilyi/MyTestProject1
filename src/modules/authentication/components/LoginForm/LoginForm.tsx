@@ -52,6 +52,7 @@ export const LoginFormUnconnected: React.FC<{}> = props => {
           label="Мобильный телефон"
           type="phone"
           placeholder="9794426521"
+          prepend="+7"
           currentActiveField={activeField}
           setCurrentActiveField={setActiveField}
           onChange={(e: any) => setPhoneField(e.target.value)}
