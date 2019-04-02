@@ -1,0 +1,7 @@
+@mixin shadow-bottom {
+  box-shadow: 0 4px 2px -2px var(--themed-main-shadow-color);
+}
+
+@mixin shadow-panel {
+  box-shadow: 0 3px 1px -1px var(--themed-main-shadow-color);
+}

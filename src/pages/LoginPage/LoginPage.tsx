@@ -11,7 +11,7 @@ import styles from "./LoginPage.module.scss";
 export default class LoginPage extends Component {
   render() {
     return (
-      <div>
+      <div className={styles.page}>
         <div className={styles.header}>
           <img src={logo} className={styles.logo} alt="logo" />
         </div>
@@ -22,9 +22,9 @@ export default class LoginPage extends Component {
                 <LoginForm />
               </div>
               <p className="text-center">
-                Еще нет аккаунта?
-                <Link to="/register">
-                  <b style={{ color: "black" }}>Регистрация</b>
+                Еще нет аккаунта?{" "}
+                <Link to="/register" className="register-link">
+                  Регистрация
                 </Link>
               </p>
             </Col>

@@ -31,11 +31,9 @@ export const SidebarUnconnected: React.FC<{}> = props => {
         </div>
       </div>
 
-      <div className="mb-3">
-        <SidebarItem>
-          {firstName} {lastName}
-        </SidebarItem>
-      </div>
+      <SidebarItem className="main-text">
+        {firstName} {lastName}
+      </SidebarItem>
 
       <Link to="/dashboard/profile" className="link-in-button">
         <SidebarItem border className="mb-3">

@@ -5,6 +5,7 @@ interface Palette {
   secondary: string;
   success: string;
   warning: string;
+  shadow: string;
 }
 interface ElementPalette {
   primary: string;
@@ -51,7 +52,8 @@ export const themes: Record<ThemeName, Theme> = {
         primary: "whitesmoke",
         secondary: "grey",
         success: "green",
-        warning: "crimson"
+        warning: "crimson",
+        shadow: "#BBB"
       }
     }
   },
@@ -79,7 +81,8 @@ export const themes: Record<ThemeName, Theme> = {
         primary: "whitesmoke",
         secondary: "grey",
         success: "lightgreen",
-        warning: "crimson"
+        warning: "crimson",
+        shadow: "black"
       }
     }
   }

@@ -8,7 +8,15 @@
   color: var(--themed-text-secondary-color);
 }
 
-.link-in-button, .link-in-button:hover  {
+.link-in-button,
+.link-in-button:hover {
   color: var(--themed-text-primary-color);
-  text-decoration: none
+  text-decoration: none;
+}
+
+.register-link,
+.register-link:hover {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
 }
