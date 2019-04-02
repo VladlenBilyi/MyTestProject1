@@ -88,10 +88,6 @@ export const LoginFormUnconnected: React.FC<{}> = props => {
           </Form.Text>
         </Link>
 
-        <p className={`${styles.error} text-center`}>
-          {injected.error.message}
-        </p>
-
         <Button variant="primary" onClick={login} type="submit" block>
           Войти
         </Button>
