@@ -47,7 +47,7 @@ export const LoginFormUnconnected: React.FC<{}> = props => {
   }
 
   return (
-    <div className={styles.form}>
+    <Form className={styles.form} onSubmit={login}>
       <h2>Вход</h2>
       <p className="text-muted">
         в личный кабинет и запись на квалификационные экзамены
@@ -95,7 +95,7 @@ export const LoginFormUnconnected: React.FC<{}> = props => {
           </Form.Text>
         </Link>
 
-        <Button variant="primary" onClick={login} type="submit" block>
+        <Button variant="primary" type="submit" block>
           Войти
         </Button>
 
@@ -107,7 +107,7 @@ export const LoginFormUnconnected: React.FC<{}> = props => {
           />
         </Form.Group>
       </Form.Group>
-    </div>
+    </Form>
   );
 };
 
