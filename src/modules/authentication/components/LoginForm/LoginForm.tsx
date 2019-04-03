@@ -74,7 +74,7 @@ export const LoginFormUnconnected: React.FC<{}> = props => {
           name="password"
           label="Пароль"
           type="password"
-          placeholder=""
+          placeholder="123456"
           currentActiveField={activeField}
           setCurrentActiveField={setActiveField}
           onChange={onPasswordChange}
