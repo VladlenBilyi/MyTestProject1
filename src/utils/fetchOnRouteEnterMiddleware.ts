@@ -3,10 +3,9 @@
 */
 
 import { LOCATION_CHANGE } from "redux-first-history";
-
 import { Middleware, MiddlewareAPI, Dispatch, Action } from "redux";
-
 import { ThunkAction } from "redux-thunk";
+
 import { isFetched } from "./fetchState";
 
 interface Options<S> {

@@ -19,7 +19,6 @@ const mapDispatchToProps = {
 
 type ModelProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;
-
 type InjectedProps = ModelProps & DispatchProps;
 
 interface Props {}

@@ -26,7 +26,8 @@ const mapStateToProps = (state: Store) => {
   };
 };
 
-type InjectedProps = ReturnType<typeof mapStateToProps>;
+type ModelProps = ReturnType<typeof mapStateToProps>;
+type InjectedProps = ModelProps;
 
 export const ProfilePanelUnconnected: React.FC<{}> = props => {
   const {
