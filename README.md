@@ -1,10 +1,20 @@
 # React Redux Typescript App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple single page application with login and dashboard pages.
 
 [Live demo](https://cocky-yalow-7eca1d.netlify.com/)
 
-## Used packages and technologies
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Features
+
+- Clean modular structure
+- Strongly typed React components and redux logic
+- Authentication logic and protected routes
+- Redux as a source of truth for routing related side effects, e.g. no data fetching inside components
+- On the fly theme switching
+
+## Packages and technologies
 
 - Typescript
 - SCSS
