@@ -14,6 +14,8 @@ export const ProfileReducer = (
       return { ...state, ...failed(), error: action.error };
     case TypeKeys.GET_PROFILE_SUCCESS:
       return { ...state, ...success(), ...action.payload.profile };
+    case TypeKeys.RESET_PROFILE_STATE:
+      return initialState;
     default:
       return state;
   }

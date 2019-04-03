@@ -8,6 +8,8 @@ export const SettingsReducer = (
   switch (action.type) {
     case TypeKeys.SET_THEME:
       return { ...state, theme: action.payload.theme };
+    case TypeKeys.RESET_THEME_STATE:
+      return initialState;
     default:
       return state;
   }

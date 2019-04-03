@@ -16,6 +16,8 @@ export const AuthenticationReducer = (
       return { ...state, ...failed(), error: action.error };
     case TypeKeys.AUTHENTICATION_SET_TOKEN:
       return { ...state, token: action.payload.token };
+    case TypeKeys.AUTHENTICATION_RESET_STATE:
+      return initialState;
     default:
       return state;
   }

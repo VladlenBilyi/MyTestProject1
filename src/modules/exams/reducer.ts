@@ -14,6 +14,8 @@ export const ExamsReducer = (
       return { ...state, ...failed(), error: action.error };
     case TypeKeys.GET_EXAMS_SUCCESS:
       return { ...state, ...success(), ...action.payload.exams };
+      case TypeKeys.RESET_EXAMS_STATE:
+        return initialState;
     default:
       return state;
   }

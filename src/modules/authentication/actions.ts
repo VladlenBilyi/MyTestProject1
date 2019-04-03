@@ -4,14 +4,17 @@ export enum TypeKeys {
   AUTHENTICATION_LOGIN_STARTED = "Authentication.LOGIN_STARTED",
   AUTHENTICATION_LOGIN_SUCCESS = "Authentication.LOGIN_SUCCESS",
   AUTHENTICATION_LOGIN_FAILED = "Authentication.LOGIN_FAILED",
-  AUTHENTICATION_SET_TOKEN = "Authentication.SET_TOKEN"
+  AUTHENTICATION_SET_TOKEN = "Authentication.SET_TOKEN",
+
+  AUTHENTICATION_RESET_STATE = "Authentication.RESET_STATE"
 }
 
 export type ActionTypes =
   | LoginStartedAction
   | LoginSuccessAction
   | LoginFailedAction
-  | SetTokenAction;
+  | SetTokenAction
+  | ResetStateAction
 
 export const loginStarted = () => ({
   type: TypeKeys.AUTHENTICATION_LOGIN_STARTED as TypeKeys.AUTHENTICATION_LOGIN_STARTED
@@ -33,7 +36,12 @@ export const loginFailed = (error: AuthenticationError) => ({
   error
 });
 
+export const resetState = () => ({
+  type: TypeKeys.AUTHENTICATION_RESET_STATE as TypeKeys.AUTHENTICATION_RESET_STATE
+});
+
 export type LoginStartedAction = ReturnType<typeof loginStarted>;
 export type LoginSuccessAction = ReturnType<typeof loginSuccess>;
 export type LoginFailedAction = ReturnType<typeof loginFailed>;
 export type SetTokenAction = ReturnType<typeof setToken>;
+export type ResetStateAction = ReturnType<typeof resetState>;

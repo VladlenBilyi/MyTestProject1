@@ -4,10 +4,18 @@ import { push } from "redux-first-history";
 
 import { Store } from "../../store";
 
-import { getProfileSuccess } from "../profile/actions";
+import { getProfileSuccess, resetProfileState } from "../profile/actions";
+import { resetExamsState } from "../exams/actions";
+import { resetTheme } from "../settings/actionsThunk";
 
+import {
+  loginStarted,
+  loginSuccess,
+  loginFailed,
+  setToken,
+  resetState
+} from "./actions";
 import { postLogin } from "./api";
-import { loginStarted, loginSuccess, loginFailed, setToken } from "./actions";
 
 export const login = (
   phone: string,
@@ -19,12 +27,29 @@ export const login = (
     const {
       data: { token, profile }
     } = response;
-    dispatch(loginSuccess());
+
     dispatch(setToken(token));
+    window.localStorage.setItem("app:token", token);
+
     dispatch(getProfileSuccess(profile));
+    dispatch(loginSuccess());
     dispatch(push("/dashboard/profile"));
-    window.localStorage.setItem('app:token', token);
   } else {
     dispatch(loginFailed(response.error));
   }
+};
+
+export const logout = (): ThunkAction<
+  void,
+  Store,
+  null,
+  Action<string>
+> => async dispatch => {
+  window.localStorage.removeItem("app:token");
+
+  dispatch(resetState());
+  dispatch(resetExamsState());
+  dispatch(resetProfileState());
+  dispatch(resetTheme());
+  dispatch(push("/"));
 };
