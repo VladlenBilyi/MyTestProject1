@@ -37,12 +37,12 @@ export const themes: Record<ThemeName, Theme> = {
           inverted: "#CCC"
         },
         background: {
-          primary: "#EEE",
-          secondary: "#AAA",
+          primary: "#FFF",
+          secondary: "#DDD",
           inverted: "#222"
         },
         button: {
-          primary: "#AAA",
+          primary: "#CCC",
           secondary: "#EEE",
           inverted: "#222",
           hover: "#BBB"
