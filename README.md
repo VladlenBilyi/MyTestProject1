@@ -8,8 +8,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Features
 
-- Clean modular structure
-- Strongly typed React components and redux logic
+- Clean modular architecture
+- Strongly typed React components and redux
 - Authentication logic and protected routes
 - Redux as a source of truth for routing related side effects, e.g. no data fetching inside components
 - On the fly theme switching
@@ -22,7 +22,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - @reach/router
 - redux, redux-thunk, redux-first-history
 - react-bootstrap
-- date-fns, axios, classnames
+- date-fns, classnames
+- axios, axios-mock-adapter 
 
 ## Launch locally
 
