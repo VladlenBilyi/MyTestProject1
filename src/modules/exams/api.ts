@@ -2,7 +2,7 @@ import { createQueryFromObject } from "../../utils/query";
 
 import { ApiResponse, requester, withToken } from "../../api";
 
-const examsEndpoint = `/exams`;
+export const examsEndpoint = `/exams`;
 
 export interface ExamServerData {
   id: string;

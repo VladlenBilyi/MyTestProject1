@@ -2,7 +2,7 @@ import { ApiResponse, requester } from "../../api";
 
 export const loginEndpoint = `/account/login`;
 
-export interface SuccessResponse {
+export interface LoginServerData {
   profile: {
     id: string;
     firstName: string;
@@ -24,14 +24,14 @@ interface ErrorResponse {
   };
 }
 
-type LoginResponse = ApiResponse<SuccessResponse, ErrorResponse>;
+type LoginResponse = ApiResponse<LoginServerData, ErrorResponse>;
 
 export const postLogin = async (
   phone: string,
   password: string
 ): Promise<LoginResponse> => {
   try {
-    const result = await requester.post<SuccessResponse>(loginEndpoint, {
+    const result = await requester.post<LoginServerData>(loginEndpoint, {
       phone,
       password
     });

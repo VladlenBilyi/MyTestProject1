@@ -1,6 +1,6 @@
 import { ApiResponse, requester, withToken } from "../../api";
 
-const profileEndpoint = `/account/profile`;
+export const profileEndpoint = `/account/profile`;
 
 export interface ProfileServerData {
   id: string;
