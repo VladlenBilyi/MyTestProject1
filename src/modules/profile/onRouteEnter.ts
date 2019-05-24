@@ -1,4 +1,4 @@
-import { getProfile } from "./actionsApi";
+import { getProfile } from "./actions.api";
 
 export const onRouteEnter = {
   resource: "profile",

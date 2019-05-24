@@ -4,7 +4,7 @@ import Table from "react-bootstrap/Table";
 
 import { Store } from "../../../../store";
 
-import { getExams } from "../../actionsApi";
+import { getExams } from "../../actions.api";
 import { allExamsSelector } from "../../selectors";
 
 import { ExamItem } from "../ExamItem/ExamItem";

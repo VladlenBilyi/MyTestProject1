@@ -7,7 +7,7 @@ import { Form, Button, FormControlProps } from "react-bootstrap";
 import { Store } from "../../../../store";
 
 import { getError } from "../../selectors";
-import { login } from "../../actionsApi";
+import { login } from "../../actions.api";
 
 import { InputField } from "../InputField/InputField";
 

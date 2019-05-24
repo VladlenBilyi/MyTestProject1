@@ -24,7 +24,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-first-history": "^4.0.0-alpha.7",
     "redux-thunk": "^2.3.0",
-    "typescript": "3.3.4000"
+    "typescript": "^3.4.5"
   },
   "scripts": {
     "start": "react-scripts start",

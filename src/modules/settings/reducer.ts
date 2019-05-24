@@ -1,5 +1,7 @@
 import { SettingsModel, SettingsState, initialState } from "./model";
-import { ActionTypes, TypeKeys } from "./actions";
+
+import { TypeKeys } from "./actions.constants";
+import { ActionTypes } from "./actions.types";
 
 export const SettingsReducer = (
   state: SettingsModel = initialState,

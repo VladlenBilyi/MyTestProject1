@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { Store } from "../../../store";
 
-import { toggleTheme } from "../actionsThunk";
+import { toggleTheme } from "../actions.thunk";
 
 import { activeThemeSelector } from "../selectors";
 

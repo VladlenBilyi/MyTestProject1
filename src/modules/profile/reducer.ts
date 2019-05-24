@@ -1,7 +1,8 @@
 import { started, success, failed } from "../../utils/fetchState";
 
 import { ProfileState, initialState } from "./model";
-import { ActionTypes, TypeKeys } from "./actions";
+import { ActionTypes } from "./actions.types";
+import { TypeKeys } from "./actions.constants";
 
 export const ProfileReducer = (
   state: ProfileState = initialState,

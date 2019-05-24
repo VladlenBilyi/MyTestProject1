@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Store } from "../../../../store";
 
 import { activeThemeSelector } from "../../../settings/selectors";
-import { logout } from "../../../authentication/actionsApi";
+import { logout } from "../../../authentication/actions.api";
 
 import { HeaderIcon } from "./HeaderIcon";
 import { LogoutIcon } from "./LogoutIcon";

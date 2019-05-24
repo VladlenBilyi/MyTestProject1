@@ -1,4 +1,4 @@
-import { getExams } from "./actionsApi";
+import { getExams } from "./actions.api";
 import { defaultGetExamsParams } from "./api";
 
 export const onRouteEnter = {
